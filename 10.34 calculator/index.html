@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 10px 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* top */
+        h1 {
+            margin: 5px 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        input {
+            border: none;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+            width: 130px;
+        }
+
+        input:focus {
+            outline: none;
+            border: 1px solid white;
+            box-shadow: 0 0 2px 1px rgba(2, 134, 158, 0.99);
+        }
+
+        button {
+            background-color: white;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 2px 1px 2px rgba(21, 21, 22, 0.5);
+            width: 100px;
+            transition: transform 0.1s ease;
+        }
+
+        button:active {
+            transform: scale(0.97);
+            background-color: rgb(247, 245, 245);
+        }
+
+        /* bottom */
+        .results {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        h2 {
+            margin: 20px 0 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Калькулятор чаевых</h1>
+    <form action="#" method="get">
+        <div class="data">
+            <label>
+                Сумма счёта:
+                <input id="bill" type="number" name="number" id="number" min="0" max="">
+            </label>
+        </div>
+        <div class="data">
+            <label>
+                Процент чаевых:
+                <input id="tip-percent" type="number" name="number" id="number" min="0" max="100">
+            </label>
+        </div>
+        <div class="data">
+            <label>
+                Кол-во человек:
+                <input id="count-of-people" type="number" name="number" id="number" min="0" max="">
+            </label>
+        </div>
+    </form>
+    <button id="only-button" type="submit">Рассчитать</button>
+
+    <div class="results">
+        <h2>Результаты</h2>
+        <label>
+            Чаевые:
+            <span id="tips"></span>
+        </label>
+        <label>
+            Общая сумма:
+            <span id="total-amount"></span>
+        </label>
+        <label>
+            Сумма на человека:
+            <span id="amount-per-person"></span>
+        </label>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
